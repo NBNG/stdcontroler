@@ -16,12 +16,14 @@ public class Principal extends javax.swing.JFrame {
 
     public Principal(String l, String s) throws SQLException {
         super("St. Controller");
+        
         senha = s;
         login = l;
         initComponents();
         pdao = new ParcelaDAO();
         pdao.listarPendente();
         this.setExtendedState(MAXIMIZED_BOTH);
+        this.setResizable(false);
         cdao = new ClienteDAO();
 
         if (senha.equals("123")) {
@@ -84,7 +86,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logo.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jLabel1.setBounds(0, 0, 1360, 670);
+        jLabel1.setBounds(0, 0, 1370, 680);
         jDesktopPane2.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jBarra.setBackground(new java.awt.Color(0, 0, 255));

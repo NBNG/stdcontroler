@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
+
+
 public class FuncionarioDAO {
 
     private Connection conn;
@@ -20,7 +22,8 @@ public class FuncionarioDAO {
 
     public void adicionar(Funcionario funcionario) throws SQLException {
         String sql = "insert into funcionario (fun_nome,fun_telefone,fun_rua,"
-                + "fun_numero,fun_bairro,fun_cidade,fun_cargo,fun_login,fun_senha,fun_cpf,fun_rg) values (?,?,?,?,?,?,?,?,?,?,?)";
+                + "fun_numero,fun_bairro,fun_cidade,fun_cargo,fun_login,fun_senha,fun_cpf,fun_rg) "
+                + "values (?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement stmt = this.conn.prepareStatement(sql);
         stmt.setString(1, funcionario.getNome());
         stmt.setString(2, funcionario.getTelefone());
