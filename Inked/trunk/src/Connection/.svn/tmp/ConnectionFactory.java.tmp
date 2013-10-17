@@ -1,0 +1,27 @@
+package Connection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
+public class ConnectionFactory {
+
+    public static Connection getConexao() throws SQLException{
+        String user = "postgres";
+        String senha = "senha";
+<<<<<<< .mine
+        String url = "jdbc:postgresql://localhost:5432/Inked";
+=======
+        String url = "jdbc:postgresql://localhost:5432/inked";
+>>>>>>> .r16
+
+        try {
+            return DriverManager.getConnection(url, user, senha);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Erro, por favor constatar ao administrador.\n" + e);
+            throw new SQLException(e.getMessage());
+        }
+    }
+}
