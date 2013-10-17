@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="inked" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30da41db-9734-40b2-a935-aa2862455d06">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="cli_nome" class="java.lang.String"/>
+	<field name="to_char" class="java.lang.String"/>
+	<field name="cli_cpf" class="java.lang.String"/>
+	<field name="cli_rg" class="java.lang.String"/>
+	<field name="endereco" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="161">
+			<staticText>
+				<reportElement uuid="d09271ef-0874-42c8-948b-e43a312a96a3" x="0" y="0" width="575" height="51"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Termo de Consentimento Livre e Esclarecido (TCLE)
+DADOS PESSOAIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4e8dd72d-2bac-445c-aba5-28ca5deaf95c" mode="Opaque" x="0" y="51" width="49" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="fe001147-245c-4b72-886a-bc007a61a518" x="49" y="51" width="373" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cli_nome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8fac61c7-3673-45b8-816e-579391ef9bed" mode="Opaque" x="0" y="71" width="34" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="d21cfc98-988d-4c97-9435-61f521477a6b" x="34" y="71" width="159" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cli_cpf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="3489e24e-2dd7-40e3-a3b4-ea4ecc44d97d" mode="Opaque" x="0" y="91" width="34" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RG:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="83b2478f-cd20-4fd6-9b4f-2bf844bebcf8" x="34" y="91" width="159" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cli_rg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="778271bc-714a-43e1-b894-0d52c61b1df0" mode="Opaque" x="0" y="111" width="92" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nascimento:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="745cea1b-9d94-4e5a-8b68-fcb7fa6171e7" x="92" y="111" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{to_char}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a1caec84-da51-4c63-871e-7df06efd8055" mode="Opaque" x="0" y="131" width="77" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="26122dfb-81c9-4d1e-8bf7-e3ad709557dd" x="77" y="131" width="378" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="401">
+			<staticText>
+				<reportElement uuid="da2391d0-effc-45d7-a153-6b8b25954206" x="0" y="0" width="555" height="401"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Declaro estar informado e ciente das possíveis complicações decorrentes das prática de maquiagem definitiva, tatuagem e colocação de piercing sobre:
+1-As dificuldades de remoção de tatuagem;
+2- As possíveis seqüelas remanescentes à colocação e/ou retirada de piercing
+3- Às reações alérgicas e alguns pigmentos e materiais ou a rejeição orgânica dos mesmos como corpo estranho
+4- A inserção de piercing e tatuagens em locais do corpo como áreas cartilaginosas,articulações,genitáçia e mucosas
+5- As aplicações de maquiagens definitivas, tatuagens e colocação de piercing em pacientes portadores de doençãs infecto-contagiosas(hepatites,hanseníase, dentre outras),diabetes mellitus,AIDS ou outra imunodeficiência; coagulopatias; doenças cardíacas de qualquer natureza, alérgicas, portadores de prótese em qualquer local e válvulas cardíacas; convalescentes de doenças, cirurgias recentes, predisposição a quelóide; bem como, aplicação dos procedimentos em locais com cicatrizes, alergias, queimaduras ou doenças agudas ou crônicas da pele. Nestes casos necessitam de avaliação e liberção medica.
+]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="223">
+			<staticText>
+				<reportElement uuid="7e30d92d-150d-49ca-99d1-ab3bbb899315" x="0" y="107" width="469" height="110"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Cruzeiro,____ de ____________________ de  _________
+
+
+--------------------------------------
+Ass.
+]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20"/>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17"/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

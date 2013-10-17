@@ -24,7 +24,7 @@ public class ClienteDAO {
         try {
             PreparedStatement stmt = this.conexao.prepareStatement(sql);
             stmt.setString(1, cliente.getNome());
-            stmt.setDate(2, new java.sql.Date(cliente.getTeste().getTime()));
+            stmt.setDate(2, new java.sql.Date(cliente.getNascimento().getTime()));
             stmt.setString(3, cliente.getTelefone());
             stmt.setString(4, cliente.getCpf());
             stmt.setString(5, cliente.getRg());
@@ -84,7 +84,7 @@ public class ClienteDAO {
                 + " where cli_codigo = ?";
         PreparedStatement stmt = this.conexao.prepareStatement(sql);
         stmt.setString(1, cliente.getNome());
-        stmt.setDate(2, new java.sql.Date(cliente.getTeste().getTime()));
+        stmt.setDate(2, new java.sql.Date(cliente.getNascimento().getTime()));
         stmt.setString(3, cliente.getTelefone());
         stmt.setString(4, cliente.getCpf());
         stmt.setString(5, cliente.getRg());

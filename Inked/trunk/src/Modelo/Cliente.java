@@ -16,15 +16,6 @@ public class Cliente {
     private String bairro;
     private String cidade;
 
-    public Date getTeste() {
-        return teste;
-    }
-
-    public void setTeste(Date teste) {
-        this.teste = teste;
-    }
-    private Date teste;
-
     public Date getNascimento() {
         return nascimento;
     }

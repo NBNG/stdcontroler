@@ -33,7 +33,7 @@ public class Termo_Consentimento {
     }
 
     public void gerar(int id) throws JRException, SQLException {
-        String caminho = "C:\\Inked\\Termo\\inked.jrxml";
+        String caminho = "\\Termo\\inked.jrxml";
         JasperDesign desenho = JRXmlLoader.load(caminho);
         JasperReport relatorio = JasperCompileManager.compileReport(desenho);
         String query = "select cli_nome, cli_cpf,cli_rg,to_char(cli_datanasc,"
