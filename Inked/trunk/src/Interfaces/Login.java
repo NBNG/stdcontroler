@@ -38,8 +38,10 @@ public class Login extends javax.swing.JFrame {
         jPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel.setForeground(new java.awt.Color(51, 153, 0));
 
+        jLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLogin.setText("Login:");
 
+        jLSenha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLSenha.setText("Senha:");
 
         jTLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -52,6 +54,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jButCanc.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButCanc.setText("Cancelar");
         jButCanc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,6 +62,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jButCon.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButCon.setText("Conectar");
         jButCon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,7 +132,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLImagem)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         pack();

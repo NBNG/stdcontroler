@@ -34,12 +34,14 @@ public class Listagem_Cartao extends javax.swing.JInternalFrame {
 
         setClosable(true);
 
+        Tabela.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Tabela.setModel(tmParcela);
         jScrollPane1.setViewportView(Tabela);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Listagem de Parcelas - Cartão");
 
+        jRBAtual.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRBAtual.setText("Por dia Atual");
         jRBAtual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,6 +49,7 @@ public class Listagem_Cartao extends javax.swing.JInternalFrame {
             }
         });
 
+        jRBDesejado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRBDesejado.setText("Por dia Desejado");
         jRBDesejado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,12 +57,15 @@ public class Listagem_Cartao extends javax.swing.JInternalFrame {
             }
         });
 
+        jRBTotal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRBTotal.setText("Todas as Parcelas");
         jRBTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRBTotalActionPerformed(evt);
             }
         });
+
+        jDCInicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,7 +74,7 @@ public class Listagem_Cartao extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1129, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1088, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -98,7 +104,7 @@ public class Listagem_Cartao extends javax.swing.JInternalFrame {
                         .addComponent(jDCInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jRBDesejado)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();

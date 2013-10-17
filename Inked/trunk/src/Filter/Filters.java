@@ -9,7 +9,7 @@ package Filter;
  * @author Administrador
  */
 public class Filters {
-    
+
     public Double format(String valor) {
         Double resul = Double.parseDouble(valor.replaceAll(",", "."));
         return resul;

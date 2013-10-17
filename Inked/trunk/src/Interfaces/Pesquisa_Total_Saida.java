@@ -44,9 +44,10 @@ public class Pesquisa_Total_Saida extends javax.swing.JInternalFrame {
 
         setClosable(true);
 
-        jLCabecalho.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLCabecalho.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLCabecalho.setText("Pesquisa de Saída do Caixa");
 
+        Tabela.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Tabela.setModel(tmSaida);
         jScrollPane1.setViewportView(Tabela);
 
@@ -55,8 +56,10 @@ public class Pesquisa_Total_Saida extends javax.swing.JInternalFrame {
 
         jTFTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
+        jLTipoSaida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLTipoSaida.setText("Tipo:");
 
+        jCBTipoSaida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCBTipoSaida.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pagamento Tatuadores e Funcionários", "Compra de Materiais", "Pagamento de Contas", "Pagamento de Fornecedores", "Pagamento de Patrocínio", "Pagamento Outros..." }));
         jCBTipoSaida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,8 +67,12 @@ public class Pesquisa_Total_Saida extends javax.swing.JInternalFrame {
             }
         });
 
+        jLDesc.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLDesc.setText("Descrição:");
 
+        jCBDesc.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jBPesquisa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBPesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/pesquisar.png"))); // NOI18N
         jBPesquisa.setText("Pesquisar");
         jBPesquisa.addActionListener(new java.awt.event.ActionListener() {
@@ -80,31 +87,29 @@ public class Pesquisa_Total_Saida extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jLCabecalho, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLTotal)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTFTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLTotal)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTFTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLTipoSaida)
-                                    .addComponent(jLDesc))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jCBTipoSaida, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jCBDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(44, 44, 44)
-                                .addComponent(jBPesquisa)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 688, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18))))
+                            .addComponent(jLTipoSaida)
+                            .addComponent(jLDesc))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jCBDesc, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCBTipoSaida, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jBPesquisa)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 688, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLCabecalho, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,7 +134,7 @@ public class Pesquisa_Total_Saida extends javax.swing.JInternalFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLDesc)
                             .addComponent(jCBDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();

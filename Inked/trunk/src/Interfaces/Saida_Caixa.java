@@ -31,7 +31,6 @@ public class Saida_Caixa extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLValorSaida = new javax.swing.JLabel();
         jCBTipoSaida = new javax.swing.JComboBox();
-        jLDataSaida = new javax.swing.JLabel();
         jCSaida = new com.toedter.calendar.JCalendar();
         jLTipoSaida = new javax.swing.JLabel();
         jLDesc = new javax.swing.JLabel();
@@ -48,8 +47,10 @@ public class Saida_Caixa extends javax.swing.JInternalFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.setPreferredSize(new java.awt.Dimension(613, 219));
 
+        jLValorSaida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLValorSaida.setText("Valor:");
 
+        jCBTipoSaida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCBTipoSaida.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pagamento Tatuadores e Funcionários", "Compra de Materiais", "Pagamento de Contas", "Pagamento de Fornecedores", "Pagamento de Patrocínio", "Pagamento Outros..." }));
         jCBTipoSaida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,15 +58,23 @@ public class Saida_Caixa extends javax.swing.JInternalFrame {
             }
         });
 
-        jLDataSaida.setText("Data:");
-
         jCSaida.setBackground(new java.awt.Color(153, 153, 153));
+        jCSaida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
+        jLTipoSaida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLTipoSaida.setText("Tipo:");
 
+        jLDesc.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLDesc.setText("Descrição:");
 
+        jCBDesc.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jTOBS.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jLOBS.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLOBS.setText("OBS:");
+
+        jFTValor.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -76,27 +85,20 @@ public class Saida_Caixa extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLOBS)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTOBS, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLValorSaida)
-                                    .addComponent(jLTipoSaida)
-                                    .addComponent(jLDesc))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jCBTipoSaida, 0, 279, Short.MAX_VALUE)
-                                        .addComponent(jCBDesc, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(jFTValor, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 251, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLDataSaida)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTOBS, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLValorSaida)
+                            .addComponent(jLTipoSaida)
+                            .addComponent(jLDesc))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jFTValor, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCBTipoSaida, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCBDesc, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jCSaida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(28, 28, 28))
         );
@@ -118,20 +120,19 @@ public class Saida_Caixa extends javax.swing.JInternalFrame {
                             .addComponent(jLDesc)
                             .addComponent(jCBDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLDataSaida)
-                            .addComponent(jCSaida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
+                        .addGap(20, 20, 20)
+                        .addComponent(jCSaida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTOBS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLOBS))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
-        jLCabSaida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLCabSaida.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLCabSaida.setText("Efetuar saída de valor no caixa");
 
+        jBEfetuar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBEfetuar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/salvar.png"))); // NOI18N
         jBEfetuar.setText("Salvar");
         jBEfetuar.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +155,7 @@ public class Saida_Caixa extends javax.swing.JInternalFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 832, Short.MAX_VALUE))
+                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 796, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLCabSaida)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
@@ -167,7 +168,7 @@ public class Saida_Caixa extends javax.swing.JInternalFrame {
                 .addComponent(jLCabSaida)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addComponent(jBEfetuar)
                 .addGap(22, 22, 22))
         );
@@ -231,7 +232,6 @@ public class Saida_Caixa extends javax.swing.JInternalFrame {
     private com.toedter.calendar.JCalendar jCSaida;
     private javax.swing.JFormattedTextField jFTValor;
     private javax.swing.JLabel jLCabSaida;
-    private javax.swing.JLabel jLDataSaida;
     private javax.swing.JLabel jLDesc;
     private javax.swing.JLabel jLOBS;
     private javax.swing.JLabel jLTipoSaida;

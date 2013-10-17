@@ -10,6 +10,8 @@ import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
@@ -416,16 +418,23 @@ public class Listagem_Sessao extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jCBTatuadorItemStateChanged
 
     private void jBImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBImprimirActionPerformed
+
+        String caminho = "C:\\Inked\\Termo\\report7.jrxml";
+        String id = String.valueOf(sessoes.get(tabela.getSelectedRow()).getCliente().getId());
+
+
         Termo_Consentimento term = new Termo_Consentimento();
+
         try {
-            term.gerar(sessoes.get(tabela.getSelectedRow()).getCliente().getId());
+
+ 
+            term.gerar(sessoes.get(tabela.getSelectedRow()).getCliente().getId());           
         } catch (JRException ex) {
             JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
+            Logger.getLogger(Listagem_Sessao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jBImprimirActionPerformed
-
     private void jBExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExcluirActionPerformed
         int pergunta = JOptionPane.showConfirmDialog(null, "Deseja realmente excluir esta sessão?\n");
         if (pergunta == 0) {//clicou em sim  

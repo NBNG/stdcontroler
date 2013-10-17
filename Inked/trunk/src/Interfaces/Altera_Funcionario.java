@@ -39,12 +39,16 @@ public class Altera_Funcionario extends javax.swing.JInternalFrame {
         jPanel.setBackground(new java.awt.Color(255, 255, 255));
         jPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Alteração de Cadastro:"));
 
+        jLUsu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLUsu.setText("Usuário:");
 
+        jLSenha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLSenha.setText("Senha:");
 
+        jLNovaSenha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLNovaSenha.setText("Nova Senha:");
 
+        jButAlt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButAlt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/salvar.png"))); // NOI18N
         jButAlt.setText("Salvar");
         jButAlt.addActionListener(new java.awt.event.ActionListener() {
@@ -52,6 +56,12 @@ public class Altera_Funcionario extends javax.swing.JInternalFrame {
                 jButAltActionPerformed(evt);
             }
         });
+
+        jTUsu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jPSenha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jPNovaSenha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanelLayout = new javax.swing.GroupLayout(jPanel);
         jPanel.setLayout(jPanelLayout);
@@ -79,7 +89,7 @@ public class Altera_Funcionario extends javax.swing.JInternalFrame {
         jPanelLayout.setVerticalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLayout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(33, Short.MAX_VALUE)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLUsu))
@@ -101,7 +111,7 @@ public class Altera_Funcionario extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );

@@ -21,8 +21,10 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
     public Cadastro_Cliente() throws ParseException {
         initComponents();
         getContentPane().setBackground(Color.white);
-        MaskFormatter maskData = new MaskFormatter("(##) ####-####");
-        maskData.install(jFTTelefone);
+        MaskFormatter maskTel = new MaskFormatter("(##) ####-####");
+        MaskFormatter maskCPF = new MaskFormatter("###.###.###-##");
+        maskTel.install(jFTTelefone);
+        maskCPF.install(jFTCPF);
     }
 
     @SuppressWarnings("unchecked")
@@ -30,7 +32,6 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jDCNascimento = new com.toedter.calendar.JDateChooser();
-        jBExcluir = new javax.swing.JButton();
         jLNumero = new javax.swing.JLabel();
         jLBairro = new javax.swing.JLabel();
         jLNome = new javax.swing.JLabel();
@@ -61,30 +62,40 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
 
         setClosable(true);
 
-        jBExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/excluir.gif"))); // NOI18N
-        jBExcluir.setText("Excluir");
-        jBExcluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBExcluirActionPerformed(evt);
-            }
-        });
+        jDCNascimento.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
+        jLNumero.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLNumero.setText("Nº:");
 
         jLBairro.setText("Bairro:");
 
+        jLNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLNome.setText("Nome:");
 
+        jLRua.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLRua.setText("Rua:");
 
+        jTNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jLCidade.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLCidade.setText("Cidade:");
 
         jLTelefone.setText("Telefone:");
 
+        jTCidade.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jTBairro.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jTNumero.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jTRua.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jLemail.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLemail.setText("E-mail:");
 
         jLRG.setText("RG:");
 
+        jBCadastro.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/salvar.png"))); // NOI18N
         jBCadastro.setText("Salvar");
         jBCadastro.addActionListener(new java.awt.event.ActionListener() {
@@ -96,10 +107,19 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
         jLCabecalho.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLCabecalho.setText("Cadastro de Clientes");
 
+        jLCPF.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLCPF.setText("CPF:");
 
+        jLData.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLData.setText("Nascimento:");
 
+        jFTCPF.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jFTRG.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jFTTelefone.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jBEditar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/editar.png"))); // NOI18N
         jBEditar.setText("Editar");
         jBEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -108,6 +128,9 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
             }
         });
 
+        jTemail.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        TabelaCliente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         TabelaCliente.setModel(tmCliente);
         TabelaCliente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -119,6 +142,7 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(TabelaCliente);
 
+        jBPesquisar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/pesquisar.png"))); // NOI18N
         jBPesquisar.setText("Pesquisar");
         jBPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -127,12 +151,14 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
             }
         });
 
+        jTNomePesquisa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTNomePesquisa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTNomePesquisaActionPerformed(evt);
             }
         });
 
+        jBLimpar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/limpar.png"))); // NOI18N
         jBLimpar.setText("Limpar");
         jBLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -193,11 +219,9 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
                                 .addComponent(jBCadastro)
                                 .addGap(31, 31, 31)
                                 .addComponent(jBEditar)
-                                .addGap(25, 25, 25)
-                                .addComponent(jBExcluir)
-                                .addGap(29, 29, 29)
+                                .addGap(31, 31, 31)
                                 .addComponent(jBLimpar)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 553, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
@@ -207,7 +231,7 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
                 .addGap(78, 78, 78))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBCadastro, jBEditar, jBExcluir, jBLimpar, jBPesquisar});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBCadastro, jBEditar, jBLimpar, jBPesquisar});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,9 +287,8 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBCadastro)
                             .addComponent(jBEditar)
-                            .addComponent(jBExcluir)
                             .addComponent(jBLimpar))))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         pack();
@@ -356,20 +379,6 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
         jTCidade.setText(clientes.get(TabelaCliente.getSelectedRow()).getCidade());
     }//GEN-LAST:event_TabelaClienteMouseClicked
 
-    private void jBExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExcluirActionPerformed
-        int pergunta = JOptionPane.showConfirmDialog(null, "Deseja realmente excluir esta sessão?\n");
-        if (pergunta == 0) {//clicou em sim  
-            try {
-                ClienteDAO dao = new ClienteDAO();
-                dao.remover(clientes.get(TabelaCliente.getSelectedRow()).getId());
-                JOptionPane.showMessageDialog(null, "Cliente deletado com Sucesso!");
-            } catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
-            }
-        } else if (pergunta == 1) {//clicou em nao  
-        }
-    }//GEN-LAST:event_jBExcluirActionPerformed
-
     private void jBLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimparActionPerformed
         jTNome.setText("");
         jFTCPF.setText("");
@@ -420,7 +429,6 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
     private javax.swing.JTable TabelaCliente;
     private javax.swing.JButton jBCadastro;
     private javax.swing.JButton jBEditar;
-    private javax.swing.JButton jBExcluir;
     private javax.swing.JButton jBLimpar;
     private javax.swing.JButton jBPesquisar;
     private com.toedter.calendar.JDateChooser jDCNascimento;

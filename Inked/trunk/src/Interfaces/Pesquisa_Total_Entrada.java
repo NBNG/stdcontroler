@@ -57,9 +57,10 @@ public class Pesquisa_Total_Entrada extends javax.swing.JInternalFrame {
 
         setClosable(true);
 
-        jLCabecalho.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLCabecalho.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLCabecalho.setText("Pesquisa de Entrada do Caixa");
 
+        Tabela.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Tabela.setModel(tmEntrada);
         jScrollPane1.setViewportView(Tabela);
 
@@ -68,10 +69,13 @@ public class Pesquisa_Total_Entrada extends javax.swing.JInternalFrame {
 
         jTFTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
+        jLTipoEntrada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLTipoEntrada.setText("Tipo:");
 
+        jLTatuador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLTatuador.setText("Tatuadores:");
 
+        jCBTipoEntrada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCBTipoEntrada.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tatuagem", "Camisetas", "Piercings", "Alargadores", "Pomada", "Sinal", "Ingresso", "Outros..." }));
         jCBTipoEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +83,9 @@ public class Pesquisa_Total_Entrada extends javax.swing.JInternalFrame {
             }
         });
 
+        jCBTatuador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jBPesquisar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/pesquisar.png"))); // NOI18N
         jBPesquisar.setText("Pesquisar");
         jBPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +109,8 @@ public class Pesquisa_Total_Entrada extends javax.swing.JInternalFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(37, 37, 37)
-                                .addComponent(jLCabecalho))
+                                .addComponent(jLCabecalho)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -111,10 +119,10 @@ public class Pesquisa_Total_Entrada extends javax.swing.JInternalFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jCBTipoEntrada, 0, 239, Short.MAX_VALUE)
-                                    .addComponent(jCBTatuador, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(78, 78, 78)
-                        .addComponent(jBPesquisar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                                    .addComponent(jCBTatuador, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                                .addComponent(jBPesquisar)
+                                .addGap(45, 45, 45)))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 688, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(20, 20, 20))
         );
@@ -134,7 +142,7 @@ public class Pesquisa_Total_Entrada extends javax.swing.JInternalFrame {
                     .addComponent(jCBTatuador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(55, Short.MAX_VALUE)
+                .addContainerGap(59, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

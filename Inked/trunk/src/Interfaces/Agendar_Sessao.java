@@ -32,6 +32,7 @@ public class Agendar_Sessao extends javax.swing.JInternalFrame {
     List<String> tatuadorNomes;
     int i;
     Filters filter = new Filters();
+
     public Agendar_Sessao() throws ParseException {
         initComponents();
         try {
@@ -81,19 +82,25 @@ public class Agendar_Sessao extends javax.swing.JInternalFrame {
 
         setClosable(true);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Agendar Sessão");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Tatuador:");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Cliente:");
 
+        jCBTatuador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jTNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTNomeActionPerformed(evt);
             }
         });
 
+        jBPesquisar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/pesquisar.png"))); // NOI18N
         jBPesquisar.setText("Pesquisar");
         jBPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +109,7 @@ public class Agendar_Sessao extends javax.swing.JInternalFrame {
             }
         });
 
+        tabela.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tabela.setModel(tmCliente);
         tabela.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -110,20 +118,28 @@ public class Agendar_Sessao extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tabela);
 
+        jLValor.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLValor.setText("Valor:");
 
+        jLData.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLData.setText("Data:");
 
+        jLStatus.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLStatus.setText("Status:");
 
+        jLEntrada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLEntrada.setText("Entrada:");
 
+        jLHora.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLHora.setText("Hora:");
 
+        jCBStatus.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCBStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Em andamento", "Finalizada" }));
 
+        jCBRetoque.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCBRetoque.setText("Retoque");
 
+        jBCadastrar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/salvar.png"))); // NOI18N
         jBCadastrar.setText("Salvar");
         jBCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -131,6 +147,14 @@ public class Agendar_Sessao extends javax.swing.JInternalFrame {
                 jBCadastrarActionPerformed(evt);
             }
         });
+
+        jDCData.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jFTHora.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jFTValor.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jFTEntrada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -166,30 +190,29 @@ public class Agendar_Sessao extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(204, 204, 204)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTNome, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
-                                    .addComponent(jCBTatuador, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(420, 420, 420)
-                                .addComponent(jBPesquisar)))
-                        .addGap(0, 2, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jBCadastrar)))))
+                                .addComponent(jBCadastrar))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(204, 204, 204)
+                            .addComponent(jLabel1))
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel2))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jTNome, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jBPesquisar)
+                                    .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(jCBTatuador, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -230,7 +253,7 @@ public class Agendar_Sessao extends javax.swing.JInternalFrame {
                     .addComponent(jCBRetoque)
                     .addComponent(jLStatus)
                     .addComponent(jCBStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(jBCadastrar)
                 .addGap(21, 21, 21))
         );
@@ -250,7 +273,7 @@ public class Agendar_Sessao extends javax.swing.JInternalFrame {
         Cliente cliente = new Cliente();
         cliente.setId(clientes.get(tabela.getSelectedRow()).getId());
         sessao.setCliente(cliente);
-        sessao.setValor( filter.format(jFTValor.getText()));
+        sessao.setValor(filter.format(jFTValor.getText()));
         sessao.setTipo((String) jCBStatus.getSelectedItem());
         //if responsavel por não dar erro se o sinal não for efetuado
         if (jFTEntrada.getText().equals("")) {

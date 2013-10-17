@@ -23,6 +23,7 @@ public class Feed_Aniversario extends javax.swing.JInternalFrame {
 
         setClosable(true);
 
+        jLFeedAniversario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLFeedAniversario.setText("aniversario");
         try {
 
@@ -36,6 +37,7 @@ public class Feed_Aniversario extends javax.swing.JInternalFrame {
             Logger.getLogger(Lista_Aniversario.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+        jLFeedParcelas.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLFeedParcelas.setText("parcelas");
         try {
 
@@ -60,7 +62,7 @@ public class Feed_Aniversario extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLFeedParcelas)))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -68,7 +70,7 @@ public class Feed_Aniversario extends javax.swing.JInternalFrame {
                 .addComponent(jLFeedAniversario)
                 .addGap(31, 31, 31)
                 .addComponent(jLFeedParcelas)
-                .addGap(0, 11, Short.MAX_VALUE))
+                .addGap(0, 24, Short.MAX_VALUE))
         );
 
         pack();

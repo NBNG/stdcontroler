@@ -4,7 +4,6 @@ import DAO.FuncionarioDAO;
 import DAO.MovimentacaoDAO;
 import DAO.ParcelaDAO;
 import Filter.Filters;
-import Filter.NameDocumentFilter;
 import Modelo.Movimentacao;
 import Modelo.Parcela;
 import java.awt.Color;
@@ -12,8 +11,6 @@ import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.List;
 import javax.swing.JOptionPane;
-import javax.swing.text.AbstractDocument;
-import javax.swing.text.DocumentFilter;
 
 public class Entrada_Caixa extends javax.swing.JInternalFrame {
 
@@ -21,10 +18,10 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
     MovimentacaoDAO dao;
     int i;
     Filters filters = new Filters();
-    
+
     public Entrada_Caixa() throws SQLException {
         initComponents();
-        
+
         try {
             jCBTatuador.setVisible(false);
             jLTatuador.setVisible(false);
@@ -402,6 +399,4 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTOBS;
     private javax.swing.JTextField jTQnt;
     // End of variables declaration//GEN-END:variables
-
-    
 }

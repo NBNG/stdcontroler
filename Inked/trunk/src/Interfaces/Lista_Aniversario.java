@@ -33,9 +33,10 @@ public class Lista_Aniversario extends javax.swing.JInternalFrame {
 
         setClosable(true);
 
-        jLNiver.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLNiver.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLNiver.setText("Aniversariantes");
 
+        tabela.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tabela.setModel(tmCliente);
         tabela.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -44,6 +45,7 @@ public class Lista_Aniversario extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tabela);
 
+        jRBHoje.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRBHoje.setText("Hoje");
         jRBHoje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,6 +53,7 @@ public class Lista_Aniversario extends javax.swing.JInternalFrame {
             }
         });
 
+        jRBMes.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRBMes.setText("Mês");
         jRBMes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,7 +77,7 @@ public class Lista_Aniversario extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(292, 292, 292)
                         .addComponent(jLNiver)))
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,7 +91,7 @@ public class Lista_Aniversario extends javax.swing.JInternalFrame {
                         .addComponent(jRBHoje)
                         .addGap(18, 18, 18)
                         .addComponent(jRBMes)))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         pack();

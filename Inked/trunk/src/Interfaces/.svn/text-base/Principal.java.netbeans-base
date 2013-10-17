@@ -1,6 +1,7 @@
 package Interfaces;
 
 import DAO.ClienteDAO;
+import DAO.FuncionarioDAO;
 import DAO.ParcelaDAO;
 import backup.Backup;
 import java.sql.SQLException;
@@ -23,6 +24,9 @@ public class Principal extends javax.swing.JFrame {
         this.setExtendedState(MAXIMIZED_BOTH);
         cdao = new ClienteDAO();
 
+        if (senha.equals("123")) {
+            JOptionPane.showMessageDialog(null, "Por favor, altere sua senha para maior segurança!");
+        }
         if ((!cdao.pegaAniversario().equals("0") || !pdao.contarParcelas().equals("0"))) {
             Feed_Aniversario fa = new Feed_Aniversario();
             jDesktopPane2.add(fa);
@@ -37,7 +41,6 @@ public class Principal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jDesktopPane2 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jBarra = new javax.swing.JMenuBar();
         jMCaixa = new javax.swing.JMenu();
         jMIPesquisa = new javax.swing.JMenuItem();
@@ -59,7 +62,21 @@ public class Principal extends javax.swing.JFrame {
         jMIListarSessao = new javax.swing.JMenuItem();
         jMArquivo = new javax.swing.JMenu();
         jMILogoff = new javax.swing.JMenuItem();
-        jMIBackup = new javax.swing.JMenuItem();
+        jMIRealizar_Backup = new javax.swing.JMenuItem();
+        try {
+            FuncionarioDAO fdao = new FuncionarioDAO();
+            if (fdao.confereTatuador(login, senha)) {
+                jMMovi.setEnabled(false);
+            }
+            if (fdao.confere(login, senha) == false) {
+                jMICartao.setEnabled(false);
+                jMITotal.setEnabled(false);
+                jMIPesquisa.setEnabled(false);
+                jMICadastrarTatuador.setEnabled(false);
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
+        }
 
         jMenu1.setText("jMenu1");
 
@@ -68,11 +85,6 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         jLabel1.setBounds(1270, 720, 34, 14);
         jDesktopPane2.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logo.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jLabel2.setBounds(0, 0, 1390, 710);
-        jDesktopPane2.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jBarra.setBackground(new java.awt.Color(0, 0, 255));
 
@@ -200,6 +212,7 @@ public class Principal extends javax.swing.JFrame {
 
         jBarra.add(jMAgenda);
 
+        jMArquivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/arquivo.png"))); // NOI18N
         jMArquivo.setText("Arquivo");
         jMArquivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -215,8 +228,13 @@ public class Principal extends javax.swing.JFrame {
         });
         jMArquivo.add(jMILogoff);
 
-        jMIBackup.setText("Subir Backup");
-        jMArquivo.add(jMIBackup);
+        jMIRealizar_Backup.setText("Realizar Backup");
+        jMIRealizar_Backup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMIRealizar_BackupActionPerformed(evt);
+            }
+        });
+        jMArquivo.add(jMIRealizar_Backup);
 
         jBarra.add(jMArquivo);
 
@@ -268,11 +286,6 @@ public class Principal extends javax.swing.JFrame {
         } catch (ParseException ex) {
             JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
-
-
-        //ex.printStackTrace();
-
-
     }//GEN-LAST:event_jMIAgendarActionPerformed
 
     private void jMIListarSessaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIListarSessaoActionPerformed
@@ -347,14 +360,17 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMILogoffActionPerformed
 
     private void jMArquivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMArquivoActionPerformed
-        Backup bac = new Backup();
-        bac.realizaRestore();
     }//GEN-LAST:event_jMArquivoActionPerformed
+
+    private void jMIRealizar_BackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIRealizar_BackupActionPerformed
+        Backup bac = new Backup();
+        bac.fazBackup();
+        JOptionPane.showMessageDialog(null, "Backup realizado com sucesso.");
+    }//GEN-LAST:event_jMIRealizar_BackupActionPerformed
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jBarra;
     private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMAgenda;
     private javax.swing.JMenu jMArquivo;
     private javax.swing.JMenu jMCaixa;
@@ -362,7 +378,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMIAgendar;
     private javax.swing.JMenuItem jMIAltSenha;
     private javax.swing.JMenuItem jMIAniversario;
-    private javax.swing.JMenuItem jMIBackup;
     private javax.swing.JMenuItem jMICadastrar;
     private javax.swing.JMenuItem jMICadastrarTatuador;
     private javax.swing.JMenuItem jMICartao;
@@ -370,6 +385,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMIListarSessao;
     private javax.swing.JMenuItem jMILogoff;
     private javax.swing.JMenuItem jMIPesquisa;
+    private javax.swing.JMenuItem jMIRealizar_Backup;
     private javax.swing.JMenuItem jMISaida;
     private javax.swing.JMenu jMITotal;
     private javax.swing.JMenu jMMovi;

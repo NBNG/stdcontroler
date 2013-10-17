@@ -93,7 +93,15 @@
                   </Group>
                   <Component id="jDCDesejada" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
+<<<<<<< .mine
+<<<<<<< .mine
+              <EmptySpace pref="124" max="32767" attributes="0"/>
+=======
+              <EmptySpace pref="98" max="32767" attributes="0"/>
+=======
               <EmptySpace pref="102" max="32767" attributes="0"/>
+>>>>>>> .r52
+>>>>>>> .r51
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jBFinalizar" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jBVer" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>

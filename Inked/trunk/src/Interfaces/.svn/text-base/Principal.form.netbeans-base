@@ -170,6 +170,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMArquivo">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Imagens/arquivo.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Arquivo"/>
           </Properties>
           <Events>
@@ -184,10 +187,16 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMILogoffActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMIBackup">
+            <MenuItem class="javax.swing.JMenuItem" name="jMIRealizar_Backup">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Subir Backup"/>
+                <Property name="text" type="java.lang.String" value="Realizar Backup"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMIRealizar_BackupActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="        try {&#xd;&#xa;            FuncionarioDAO fdao = new FuncionarioDAO();&#xd;&#xa;            if (fdao.confereTatuador(login, senha)) {&#xd;&#xa;                jMMovi.setEnabled(false);&#xd;&#xa;            }&#xd;&#xa;            if (fdao.confere(login, senha) == false) {&#xd;&#xa;                jMICartao.setEnabled(false);&#xd;&#xa;                jMITotal.setEnabled(false);&#xd;&#xa;                jMIPesquisa.setEnabled(false);&#xd;&#xa;                jMICadastrarTatuador.setEnabled(false);&#xd;&#xa;            }&#xd;&#xa;        } catch (SQLException ex) {&#xd;&#xa;            JOptionPane.showMessageDialog(null, &quot;Erro:\n&quot; + ex);&#xd;&#xa;        }"/>
+              </AuxValues>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -237,19 +246,6 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
               <JLayeredPaneConstraints x="1270" y="720" width="-1" height="-1" layer="0" position="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagens/logo.jpg"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="jLabel2"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
-              <JLayeredPaneConstraints x="0" y="0" width="1390" height="710" layer="0" position="-1"/>
             </Constraint>
           </Constraints>
         </Component>

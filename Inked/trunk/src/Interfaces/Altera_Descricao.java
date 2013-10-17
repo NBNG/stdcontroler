@@ -29,9 +29,11 @@ public class Altera_Descricao extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jTADesc.setColumns(20);
+        jTADesc.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         jTADesc.setRows(5);
         jScrollPane1.setViewportView(jTADesc);
 
+        jBConcluir.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBConcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/salvar.png"))); // NOI18N
         jBConcluir.setText("Salvar");
         jBConcluir.addActionListener(new java.awt.event.ActionListener() {

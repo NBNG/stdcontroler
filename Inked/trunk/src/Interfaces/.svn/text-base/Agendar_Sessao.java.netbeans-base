@@ -3,7 +3,8 @@ package Interfaces;
 import DAO.ClienteDAO;
 import DAO.FuncionarioDAO;
 import DAO.SessaoDAO;
-import DocumentFilter.NameDocumentFilter;
+import Filter.Filters;
+import Filter.NameDocumentFilter;
 import Modelo.Cliente;
 import Modelo.Funcionario;
 import Modelo.Sessao;
@@ -30,7 +31,7 @@ public class Agendar_Sessao extends javax.swing.JInternalFrame {
     List<String> clienteNomes;
     List<String> tatuadorNomes;
     int i;
-
+    Filters filter = new Filters();
     public Agendar_Sessao() throws ParseException {
         initComponents();
         try {
@@ -249,15 +250,13 @@ public class Agendar_Sessao extends javax.swing.JInternalFrame {
         Cliente cliente = new Cliente();
         cliente.setId(clientes.get(tabela.getSelectedRow()).getId());
         sessao.setCliente(cliente);
-        sessao.setValor(Double.parseDouble(jFTValor.getText()));
+        sessao.setValor( filter.format(jFTValor.getText()));
         sessao.setTipo((String) jCBStatus.getSelectedItem());
         //if responsavel por não dar erro se o sinal não for efetuado
         if (jFTEntrada.getText().equals("")) {
-            Double x = 0.00;
-            sessao.setSinal(x);
-
+            sessao.setSinal(0.00);
         } else {
-            sessao.setSinal(Double.parseDouble(jFTEntrada.getText()));
+            sessao.setSinal(filter.format(jFTEntrada.getText()));
         }
         //formatacao de string para date  (hora)
         sessao.setData(jDCData.getDate());

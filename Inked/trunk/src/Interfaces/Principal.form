@@ -24,10 +24,16 @@
               <Image iconType="3" name="/Imagens/maquina.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Caixa"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMIPesquisa">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisa de Caixa"/>
               </Properties>
               <Events>
@@ -36,6 +42,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMICartao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cart&#xe3;o de Cr&#xe9;dito - Listagem"/>
               </Properties>
               <Events>
@@ -45,10 +54,16 @@
             <Menu class="javax.swing.JMenu" name="jMITotal">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Totais do M&#xea;s Atual"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="jTotalEntrada">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="18" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Entrada"/>
                   </Properties>
                   <Events>
@@ -57,6 +72,9 @@
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jTotalSaida">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="18" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Sa&#xed;da"/>
                   </Properties>
                   <Events>
@@ -68,10 +86,16 @@
             <Menu class="javax.swing.JMenu" name="jMMovi">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Movimenta&#xe7;&#xe3;o"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="jMIEntrada">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="18" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Entrada"/>
                   </Properties>
                   <Events>
@@ -80,6 +104,9 @@
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMISaida">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="18" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Sa&#xed;da"/>
                   </Properties>
                   <Events>
@@ -96,10 +123,16 @@
               <Image iconType="3" name="/Imagens/cliente.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Cliente"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMICadastrar">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastrar Cliente"/>
               </Properties>
               <Events>
@@ -108,6 +141,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMIAniversario">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Aniversariantes"/>
               </Properties>
               <Events>
@@ -122,10 +158,16 @@
               <Image iconType="3" name="/Imagens/funcionario.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Funcion&#xe1;rio"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMICadastrarTatuador">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastrar Funcion&#xe1;rio"/>
               </Properties>
               <Events>
@@ -134,6 +176,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMIAltSenha">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Alterar Senha"/>
               </Properties>
               <Events>
@@ -148,10 +193,16 @@
               <Image iconType="3" name="/Imagens/agenda.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Agenda"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMIAgendar">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Agendar Sess&#xe3;o"/>
               </Properties>
               <Events>
@@ -160,6 +211,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMIListarSessao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Listar Sess&#xf5;es"/>
               </Properties>
               <Events>
@@ -174,6 +228,9 @@
               <Image iconType="3" name="/Imagens/arquivo.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Arquivo"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMArquivoActionPerformed"/>
@@ -181,6 +238,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMILogoff">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Logoff"/>
               </Properties>
               <Events>
@@ -189,6 +249,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMIRealizar_Backup">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Realizar Backup"/>
               </Properties>
               <Events>
@@ -209,6 +272,7 @@
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jBarra"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -225,12 +289,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jDesktopPane2" alignment="1" pref="1354" max="32767" attributes="0"/>
+          <Component id="jDesktopPane2" alignment="0" pref="1354" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jDesktopPane2" alignment="0" pref="669" max="32767" attributes="0"/>
+          <Component id="jDesktopPane2" alignment="0" pref="668" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -241,11 +305,14 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Imagens/logo.jpg"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
-              <JLayeredPaneConstraints x="1270" y="720" width="-1" height="-1" layer="0" position="-1"/>
+              <JLayeredPaneConstraints x="0" y="0" width="1360" height="670" layer="0" position="-1"/>
             </Constraint>
           </Constraints>
         </Component>

@@ -82,15 +82,18 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logo.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jLabel1.setBounds(1270, 720, 34, 14);
+        jLabel1.setBounds(0, 0, 1360, 670);
         jDesktopPane2.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jBarra.setBackground(new java.awt.Color(0, 0, 255));
 
         jMCaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/maquina.png"))); // NOI18N
         jMCaixa.setText("Caixa");
+        jMCaixa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
+        jMIPesquisa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMIPesquisa.setText("Pesquisa de Caixa");
         jMIPesquisa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +102,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMCaixa.add(jMIPesquisa);
 
+        jMICartao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMICartao.setText("Cartão de Crédito - Listagem");
         jMICartao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,7 +112,9 @@ public class Principal extends javax.swing.JFrame {
         jMCaixa.add(jMICartao);
 
         jMITotal.setText("Totais do Mês Atual");
+        jMITotal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
+        jTotalEntrada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTotalEntrada.setText("Entrada");
         jTotalEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +123,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMITotal.add(jTotalEntrada);
 
+        jTotalSaida.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTotalSaida.setText("Saída");
         jTotalSaida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,7 +135,9 @@ public class Principal extends javax.swing.JFrame {
         jMCaixa.add(jMITotal);
 
         jMMovi.setText("Movimentação");
+        jMMovi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
+        jMIEntrada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMIEntrada.setText("Entrada");
         jMIEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +146,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMMovi.add(jMIEntrada);
 
+        jMISaida.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMISaida.setText("Saída");
         jMISaida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,7 +161,9 @@ public class Principal extends javax.swing.JFrame {
 
         jMCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/cliente.png"))); // NOI18N
         jMCliente.setText("Cliente");
+        jMCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
+        jMICadastrar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMICadastrar.setText("Cadastrar Cliente");
         jMICadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,6 +172,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMCliente.add(jMICadastrar);
 
+        jMIAniversario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMIAniversario.setText("Aniversariantes");
         jMIAniversario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,7 +185,9 @@ public class Principal extends javax.swing.JFrame {
 
         jMTatuador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/funcionario.png"))); // NOI18N
         jMTatuador.setText("Funcionário");
+        jMTatuador.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
+        jMICadastrarTatuador.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMICadastrarTatuador.setText("Cadastrar Funcionário");
         jMICadastrarTatuador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,6 +196,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMTatuador.add(jMICadastrarTatuador);
 
+        jMIAltSenha.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMIAltSenha.setText("Alterar Senha");
         jMIAltSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,7 +209,9 @@ public class Principal extends javax.swing.JFrame {
 
         jMAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/agenda.png"))); // NOI18N
         jMAgenda.setText("Agenda");
+        jMAgenda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
+        jMIAgendar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMIAgendar.setText("Agendar Sessão");
         jMIAgendar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,6 +220,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMAgenda.add(jMIAgendar);
 
+        jMIListarSessao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMIListarSessao.setText("Listar Sessões");
         jMIListarSessao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,12 +233,14 @@ public class Principal extends javax.swing.JFrame {
 
         jMArquivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/arquivo.png"))); // NOI18N
         jMArquivo.setText("Arquivo");
+        jMArquivo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMArquivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMArquivoActionPerformed(evt);
             }
         });
 
+        jMILogoff.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMILogoff.setText("Logoff");
         jMILogoff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,6 +249,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMArquivo.add(jMILogoff);
 
+        jMIRealizar_Backup.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMIRealizar_Backup.setText("Realizar Backup");
         jMIRealizar_Backup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -244,11 +266,11 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1354, Short.MAX_VALUE)
+            .addComponent(jDesktopPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1354, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 669, Short.MAX_VALUE)
+            .addComponent(jDesktopPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 668, Short.MAX_VALUE)
         );
 
         pack();

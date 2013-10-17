@@ -3,7 +3,8 @@ package Interfaces;
 import DAO.FuncionarioDAO;
 import DAO.MovimentacaoDAO;
 import DAO.ParcelaDAO;
-import DocumentFilter.NameDocumentFilter;
+import Filter.Filters;
+import Filter.NameDocumentFilter;
 import Modelo.Movimentacao;
 import Modelo.Parcela;
 import java.awt.Color;
@@ -19,9 +20,11 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
     List<String> tatuadorNomes;
     MovimentacaoDAO dao;
     int i;
-
+    Filters filters = new Filters();
+    
     public Entrada_Caixa() throws SQLException {
         initComponents();
+        
         try {
             jCBTatuador.setVisible(false);
             jLTatuador.setVisible(false);
@@ -251,7 +254,7 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
                 Parcela parcela = new Parcela();
                 Calendar cal = Calendar.getInstance();
                 ParcelaDAO pdao = new ParcelaDAO();
-                Double valorEntrada = format(jFTValorEntrada.getText());
+                Double valorEntrada = filters.format(jFTValorEntrada.getText());
                 int aux = Integer.parseInt((String) jCBParcela.getSelectedItem());
                 if (!jTQnt.getText().equals("")) {
                     Vpar = (valorEntrada * Double.parseDouble(jTQnt.getText())) / aux;
@@ -289,7 +292,7 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
                 Parcela parcela = new Parcela();
                 Calendar cal = Calendar.getInstance();
                 ParcelaDAO pdao = new ParcelaDAO();
-                Double valorEntrada = format(jFTValorEntrada.getText());
+                Double valorEntrada = filters.format(jFTValorEntrada.getText());
                 if (!jTQnt.getText().equals("")) {
                     parcela.setValor(valorEntrada * Double.parseDouble(jTQnt.getText()));
                 } else {
@@ -330,7 +333,7 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
 
                 mov.setData(jCEntrada.getDate());
                 mov.setObs(jTOBS.getText());
-                Double valorEntrada = format(jFTValorEntrada.getText());
+                Double valorEntrada = filters.format(jFTValorEntrada.getText());
                 if (jTQnt.getText().equals("")) {
                     mov.setValor(valorEntrada);
                 } else {
@@ -400,11 +403,5 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTQnt;
     // End of variables declaration//GEN-END:variables
 
-    public double format(String valor) {
-        System.out.println("1 - " +valor);
-        valor.replaceAll(",", ".");
-        System.out.println("2 - " +valor);
-        Double resul = Double.parseDouble(valor);
-        return resul;
-    }
+    
 }

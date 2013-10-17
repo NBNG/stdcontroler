@@ -427,8 +427,8 @@ public class Listagem_Sessao extends javax.swing.JInternalFrame {
 
         try {
 
- 
-            term.gerar(sessoes.get(tabela.getSelectedRow()).getCliente().getId());           
+
+            term.gerar(sessoes.get(tabela.getSelectedRow()).getCliente().getId());
         } catch (JRException ex) {
             JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         } catch (SQLException ex) {
