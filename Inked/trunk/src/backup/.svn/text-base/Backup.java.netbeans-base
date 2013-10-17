@@ -17,7 +17,7 @@ public class Backup {
             pb.redirectErrorStream(true);
             p = pb.start();
         } catch (Exception ex) {
-            ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
 
     }

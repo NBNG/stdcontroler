@@ -21,35 +21,4 @@ public class Backup {
         }
 
     }
-
-    public static void realizaRestore() {
-
-        try {
-            final List<String> comandos = new ArrayList<String>();
-
-            comandos.add("C:\\Program Files\\PostgreSQL\\9.2\\bin\\pg_restore.exe");
-            comandos.add("-i");
-            comandos.add("-h");
-            comandos.add("localhost");
-            comandos.add("-p");
-            comandos.add("5432");
-            comandos.add("-U");
-            comandos.add("postgres");
-            comandos.add("-d");
-            comandos.add("inked");
-            comandos.add("-v");
-            comandos.add("C:\\Inked\\Backup\\bkp.backup");
-
-            ProcessBuilder pb = new ProcessBuilder(comandos);
-
-            pb.environment().put("PGPASSWORD", "senha");
-
-            final Process process = pb.start();
-
-            JOptionPane.showMessageDialog(null, "Restore realizado com sucesso.");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }

@@ -19,7 +19,6 @@ import net.sf.jasperreports.engine.JasperPrintManager;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
-import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -37,7 +36,9 @@ public class Termo_Consentimento {
         String caminho = "C:\\Inked\\Termo\\inked.jrxml";
         JasperDesign desenho = JRXmlLoader.load(caminho);
         JasperReport relatorio = JasperCompileManager.compileReport(desenho);
-        String query = "select cli_nome, cli_cpf,cli_rg,to_char(cli_datanasc,'dd/mm/yyyy'),cli_rua || ' ' || cli_numero || ', ' || cli_bairro || ' - ' || cli_cidade as ENDERECO from cliente where cli_codigo = '" + id + "'";
+        String query = "select cli_nome, cli_cpf,cli_rg,to_char(cli_datanasc,"
+                + "'dd/mm/yyyy'),cli_rua || ' ' || cli_numero || ', ' || cli_bairro || ' - ' || cli_cidade as ENDERECO"
+                + " from cliente where cli_codigo = '" + id + "'";
         PreparedStatement pstmt = this.conexao.prepareStatement(query);
         ResultSet rs = pstmt.executeQuery();
         JRResultSetDataSource jrRS = new JRResultSetDataSource(rs);
