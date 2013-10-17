@@ -53,7 +53,6 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
         jPEntrada = new javax.swing.JPanel();
         jLValorEntrada = new javax.swing.JLabel();
         jLTipoEntrada = new javax.swing.JLabel();
-        jLDataEntrada = new javax.swing.JLabel();
         jCEntrada = new com.toedter.calendar.JCalendar();
         jCBTipoEntrada = new javax.swing.JComboBox();
         jLTatuador = new javax.swing.JLabel();
@@ -76,14 +75,16 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
         jPEntrada.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPEntrada.setForeground(new java.awt.Color(153, 153, 153));
 
+        jLValorEntrada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLValorEntrada.setText("Valor:");
 
+        jLTipoEntrada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLTipoEntrada.setText("Tipo:");
 
-        jLDataEntrada.setText("Data:");
-
         jCEntrada.setBackground(new java.awt.Color(153, 153, 153));
+        jCEntrada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
+        jCBTipoEntrada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCBTipoEntrada.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tatuagem", "Camisetas", "Piercings", "Alargadores", "Pomada", "Sinal", "Ingresso", "Outros..." }));
         jCBTipoEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,8 +92,12 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
             }
         });
 
+        jLTatuador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLTatuador.setText("Tatuadores:");
 
+        jCBTatuador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jCBDebito.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCBDebito.setText("Cartão Débito");
         jCBDebito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +105,7 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
             }
         });
 
+        jCBCredito.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCBCredito.setText("Cartão Crédito");
         jCBCredito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,13 +113,28 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
             }
         });
 
+        jCBParcela.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCBParcela.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
 
+        jLParcela.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLParcela.setText("Parcelas:");
 
+        jLQuant.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLQuant.setText("Quantidade:");
 
+        jTQnt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jLOBS.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLOBS.setText("OBS:");
+
+        jTOBS.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jFTValorEntrada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jFTValorEntrada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFTValorEntradaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPEntradaLayout = new javax.swing.GroupLayout(jPEntrada);
         jPEntrada.setLayout(jPEntradaLayout);
@@ -121,86 +142,82 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
             jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPEntradaLayout.createSequentialGroup()
                 .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPEntradaLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLOBS)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTOBS, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPEntradaLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPEntradaLayout.createSequentialGroup()
+                        .addGap(46, 46, 46)
                         .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPEntradaLayout.createSequentialGroup()
-                                .addGap(46, 46, 46)
-                                .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLTipoEntrada)
-                                    .addComponent(jLValorEntrada)
-                                    .addComponent(jLTatuador))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPEntradaLayout.createSequentialGroup()
-                                        .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jCBTipoEntrada, 0, 102, Short.MAX_VALUE)
-                                            .addComponent(jFTValorEntrada))
-                                        .addGap(25, 25, 25)
-                                        .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(jPEntradaLayout.createSequentialGroup()
-                                                .addComponent(jLQuant)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTQnt, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPEntradaLayout.createSequentialGroup()
-                                                .addComponent(jLParcela)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jCBParcela, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                    .addComponent(jCBTatuador, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLValorEntrada)
+                                            .addComponent(jLTipoEntrada))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jCBTipoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jFTValorEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(27, 27, 27)
+                                        .addComponent(jLQuant)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTQnt, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPEntradaLayout.createSequentialGroup()
+                                        .addComponent(jLTatuador)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jCBTatuador, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                                .addComponent(jCEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPEntradaLayout.createSequentialGroup()
-                                .addGap(116, 116, 116)
                                 .addComponent(jCBDebito)
                                 .addGap(53, 53, 53)
-                                .addComponent(jCBCredito)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                        .addComponent(jLDataEntrada)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCBCredito)
+                                    .addGroup(jPEntradaLayout.createSequentialGroup()
+                                        .addComponent(jLParcela)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jCBParcela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(jPEntradaLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLOBS)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTOBS, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(27, 27, 27))
         );
         jPEntradaLayout.setVerticalGroup(
             jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPEntradaLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
                 .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPEntradaLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(jLDataEntrada))
+                        .addComponent(jCEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                        .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTOBS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLOBS))
+                        .addGap(32, 32, 32))
                     .addGroup(jPEntradaLayout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jCEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTOBS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLOBS))
-                .addGap(32, 32, 32))
-            .addGroup(jPEntradaLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCBDebito)
-                    .addComponent(jCBCredito))
-                .addGap(34, 34, 34)
-                .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLValorEntrada)
-                    .addComponent(jLParcela)
-                    .addComponent(jCBParcela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFTValorEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLTipoEntrada)
-                    .addComponent(jCBTipoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLQuant)
-                    .addComponent(jTQnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLTatuador)
-                    .addComponent(jCBTatuador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCBDebito)
+                            .addComponent(jCBCredito))
+                        .addGap(34, 34, 34)
+                        .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLValorEntrada)
+                            .addComponent(jLParcela)
+                            .addComponent(jCBParcela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jFTValorEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLTipoEntrada)
+                            .addComponent(jLQuant)
+                            .addComponent(jTQnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCBTipoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPEntradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLTatuador)
+                            .addComponent(jCBTatuador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
+        jBEfetuar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBEfetuar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/salvar.png"))); // NOI18N
         jBEfetuar.setText("Salvar");
         jBEfetuar.addActionListener(new java.awt.event.ActionListener() {
@@ -209,7 +226,7 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
             }
         });
 
-        jLCabEntrada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLCabEntrada.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLCabEntrada.setText("Efetuar entrada de valor no caixa");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -217,28 +234,27 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLCabEntrada)
-                .addContainerGap(407, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPEntrada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLCabEntrada)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jBEfetuar))
-                    .addComponent(jPEntrada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jBEfetuar)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(21, 21, 21)
                 .addComponent(jLCabEntrada)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jPEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
                 .addComponent(jBEfetuar)
-                .addGap(19, 19, 19))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
@@ -378,6 +394,11 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
         jLParcela.setVisible(false);
         jCBParcela.setVisible(false);
     }//GEN-LAST:event_jCBDebitoActionPerformed
+
+    private void jFTValorEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFTValorEntradaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFTValorEntradaActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBEfetuar;
     private javax.swing.JCheckBox jCBCredito;
@@ -388,7 +409,6 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
     private com.toedter.calendar.JCalendar jCEntrada;
     private javax.swing.JFormattedTextField jFTValorEntrada;
     private javax.swing.JLabel jLCabEntrada;
-    private javax.swing.JLabel jLDataEntrada;
     private javax.swing.JLabel jLOBS;
     private javax.swing.JLabel jLParcela;
     private javax.swing.JLabel jLQuant;
