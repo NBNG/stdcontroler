@@ -398,7 +398,6 @@ public class Entrada_Caixa extends javax.swing.JInternalFrame {
     private void jFTValorEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFTValorEntradaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jFTValorEntradaActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBEfetuar;
     private javax.swing.JCheckBox jCBCredito;

@@ -16,7 +16,7 @@ public class Principal extends javax.swing.JFrame {
 
     public Principal(String l, String s) throws SQLException {
         super("St. Controller");
-        
+
         senha = s;
         login = l;
         initComponents();

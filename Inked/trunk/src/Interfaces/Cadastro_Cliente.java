@@ -13,11 +13,11 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
 public class Cadastro_Cliente extends javax.swing.JInternalFrame {
-    
+
     DefaultTableModel tmCliente = new DefaultTableModel(null, new String[]{"Nome", "RG", "Endereço", "Telefone", "Nascimento"});
     List<Cliente> clientes;
     ListSelectionModel lsmCliente;
-    
+
     public Cadastro_Cliente() throws ParseException {
         initComponents();
         getContentPane().setBackground(Color.white);
@@ -26,7 +26,7 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
         maskTel.install(jFTTelefone);
         maskCPF.install(jFTCPF);
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -331,7 +331,7 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
     }//GEN-LAST:event_jBCadastroActionPerformed
-    
+
     private void jBEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEditarActionPerformed
         if (TabelaCliente.getSelectedRowCount() < 1) {
             JOptionPane.showMessageDialog(null, "Selecione um cadastro a ser alterado.");
@@ -361,18 +361,18 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
             }
         }
     }//GEN-LAST:event_jBEditarActionPerformed
-    
+
     private void jBPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPesquisarActionPerformed
         try {
             ClienteDAO dao = new ClienteDAO();
             clientes = dao.listar("%" + jTNomePesquisa.getText() + "%");
             String endereco;
-            
-            
+
+
             while (tmCliente.getRowCount() > 0) {
                 tmCliente.removeRow(0);
             }
-            
+
             String[] linha = new String[]{null, null, null, null};
             for (int i = 0; i < clientes.size(); i++) {
                 endereco = clientes.get(i).getRua() + " " + clientes.get(i).getNumero() + ", " + clientes.get(i).getBairro() + " - " + clientes.get(i).getCidade();
@@ -387,7 +387,7 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
     }//GEN-LAST:event_jBPesquisarActionPerformed
-    
+
     private void TabelaClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelaClienteMouseClicked
         jTNome.setText(clientes.get(TabelaCliente.getSelectedRow()).getNome());
         jFTTelefone.setText(clientes.get(TabelaCliente.getSelectedRow()).getTelefone());
@@ -400,7 +400,7 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
         jTCidade.setText(clientes.get(TabelaCliente.getSelectedRow()).getCidade());
         jDCNascimento.setDate(clientes.get(TabelaCliente.getSelectedRow()).getNascimento());
     }//GEN-LAST:event_TabelaClienteMouseClicked
-    
+
     private void jBLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimparActionPerformed
         jTNome.setText("");
         jFTCPF.setText("");
@@ -416,22 +416,22 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
             tmCliente.removeRow(0);
         }
     }//GEN-LAST:event_jBLimparActionPerformed
-    
+
     private void TabelaClienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelaClienteMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_TabelaClienteMouseEntered
-    
+
     private void jTNomePesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNomePesquisaActionPerformed
         try {
             ClienteDAO dao = new ClienteDAO();
             clientes = dao.listar("%" + jTNomePesquisa.getText() + "%");
             String endereco;
-            
-            
+
+
             while (tmCliente.getRowCount() > 0) {
                 tmCliente.removeRow(0);
             }
-            
+
             String[] linha = new String[]{null, null, null, null};
             for (int i = 0; i < clientes.size(); i++) {
                 endereco = clientes.get(i).getRua() + " " + clientes.get(i).getNumero() + ", " + clientes.get(i).getBairro() + " - " + clientes.get(i).getCidade();
@@ -445,20 +445,20 @@ public class Cadastro_Cliente extends javax.swing.JInternalFrame {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
-        
+
     }//GEN-LAST:event_jTNomePesquisaActionPerformed
-    
+
     private void jTNomePesquisaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNomePesquisaKeyTyped
         try {
             ClienteDAO dao = new ClienteDAO();
             clientes = dao.listar("%" + jTNomePesquisa.getText() + "%");
             String endereco;
-            
-            
+
+
             while (tmCliente.getRowCount() > 0) {
                 tmCliente.removeRow(0);
             }
-            
+
             String[] linha = new String[]{null, null, null, null};
             for (int i = 0; i < clientes.size(); i++) {
                 endereco = clientes.get(i).getRua() + " " + clientes.get(i).getNumero() + ", " + clientes.get(i).getBairro() + " - " + clientes.get(i).getCidade();

@@ -19,6 +19,7 @@ import net.sf.jasperreports.engine.JasperPrintManager;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -44,7 +45,9 @@ public class Termo_Consentimento {
         JRResultSetDataSource jrRS = new JRResultSetDataSource(rs);
         HashMap parametros = new HashMap();
         parametros.put("termo", new Double(10));
+
         JasperPrint impressao = JasperFillManager.fillReport(relatorio, parametros, jrRS);
-        JasperPrintManager.printPage(impressao, 0, true);
+        JasperViewer.viewReport(impressao);
+        //JasperPrintManager.printPage(impressao, 0, true);
     }
 }
