@@ -4,6 +4,7 @@ import DAO.ClienteDAO;
 import DAO.FuncionarioDAO;
 import DAO.ParcelaDAO;
 import backup.Backup;
+import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.text.ParseException;
 import javax.swing.JOptionPane;
@@ -23,7 +24,7 @@ public class Principal extends javax.swing.JFrame {
         pdao = new ParcelaDAO();
         pdao.listarPendente();
         this.setExtendedState(MAXIMIZED_BOTH);
-        this.setResizable(false);
+
         cdao = new ClienteDAO();
 
         if (senha.equals("123")) {
@@ -34,6 +35,7 @@ public class Principal extends javax.swing.JFrame {
             jDesktopPane2.add(fa);
             fa.show();
         }
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagens/icone.png")));
     }
 
     @SuppressWarnings("unchecked")

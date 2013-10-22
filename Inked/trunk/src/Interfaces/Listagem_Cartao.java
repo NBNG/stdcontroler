@@ -66,6 +66,11 @@ public class Listagem_Cartao extends javax.swing.JInternalFrame {
         });
 
         jDCInicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jDCInicio.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jDCInicioPropertyChange(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,7 +79,7 @@ public class Listagem_Cartao extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1088, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1093, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -82,8 +87,9 @@ public class Listagem_Cartao extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRBAtual)
                     .addComponent(jRBTotal)
-                    .addComponent(jDCInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRBDesejado))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jDCInicio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jRBDesejado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(33, 33, 33))
         );
         layout.setVerticalGroup(
@@ -102,64 +108,88 @@ public class Listagem_Cartao extends javax.swing.JInternalFrame {
                         .addComponent(jDCInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jRBDesejado)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jRBAtualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBAtualActionPerformed
-        if (jRBAtual.isSelected() == true) {
+        if (jRBAtual.isSelected()) {
             jRBDesejado.setSelected(false);
             jRBTotal.setSelected(false);
-        }
-        try {
-            ParcelaDAO pdao = new ParcelaDAO();
-            parcelas = pdao.ListarCurrent();
+            try {
+                ParcelaDAO pdao = new ParcelaDAO();
+                parcelas = pdao.ListarCurrent();
 
+                while (tmParcela.getRowCount() > 0) {
+                    tmParcela.removeRow(0);
+                }
 
-            while (tmParcela.getRowCount() > 0) {
-                tmParcela.removeRow(0);
+                String[] linha = new String[]{null, null, null, null};
+                for (int i = 0; i < parcelas.size(); i++) {
+                    tmParcela.addRow(linha);
+                    tmParcela.setValueAt(parcelas.get(i).getId(), i, 0);
+                    tmParcela.setValueAt(parcelas.get(i).getParcela(), i, 1);
+                    tmParcela.setValueAt(format(parcelas.get(i).getValor()), i, 2);
+                    tmParcela.setValueAt(formatData(parcelas.get(i).getDataCompra()), i, 3);
+                    tmParcela.setValueAt(formatData(parcelas.get(i).getDataPagamento()), i, 4);
+                    tmParcela.setValueAt(parcelas.get(i).getStatus(), i, 5);
+                    tmParcela.setValueAt(parcelas.get(i).getDesc(), i, 6);
+                    tmParcela.setValueAt(parcelas.get(i).getObs(), i, 7);
+                    tmParcela.setValueAt(parcelas.get(i).getTipo(), i, 8);
+                }
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
             }
-
-            String[] linha = new String[]{null, null, null, null};
-            for (int i = 0; i < parcelas.size(); i++) {
-                tmParcela.addRow(linha);
-                tmParcela.setValueAt(parcelas.get(i).getId(), i, 0);
-                tmParcela.setValueAt(parcelas.get(i).getParcela(), i, 1);
-                tmParcela.setValueAt(format(parcelas.get(i).getValor()), i, 2);
-                tmParcela.setValueAt(formatData(parcelas.get(i).getDataCompra()), i, 3);
-                tmParcela.setValueAt(formatData(parcelas.get(i).getDataPagamento()), i, 4);
-                tmParcela.setValueAt(parcelas.get(i).getStatus(), i, 5);
-                tmParcela.setValueAt(parcelas.get(i).getDesc(), i, 6);
-                tmParcela.setValueAt(parcelas.get(i).getObs(), i, 7);
-                tmParcela.setValueAt(parcelas.get(i).getTipo(), i, 8);
-
-
-            }
-
-
-
-
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
         }
-
     }//GEN-LAST:event_jRBAtualActionPerformed
 
     private void jRBDesejadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBDesejadoActionPerformed
-        if (jRBDesejado.isSelected() == true) {
+        if (jRBDesejado.isSelected()) {
             jRBAtual.setSelected(false);
             jRBTotal.setSelected(false);
-        }
-        if (jDCInicio.getDate() == null) {
-            jRBDesejado.setSelected(false);
-            JOptionPane.showMessageDialog(null, "Por favor, preencher a data desejada.");
+            if (jDCInicio.getDate() == null) {
+                jRBDesejado.setSelected(false);
+                JOptionPane.showMessageDialog(null, "Por favor, preencher a data desejada.");
 
-        } else {
+            } else {
+                try {
+                    ParcelaDAO pdao = new ParcelaDAO();
+                    parcelas = pdao.ListarDataDesejada(jDCInicio.getDate());
+
+
+                    while (tmParcela.getRowCount() > 0) {
+                        tmParcela.removeRow(0);
+                    }
+
+                    String[] linha = new String[]{null, null, null, null};
+                    for (int i = 0; i < parcelas.size(); i++) {
+                        tmParcela.addRow(linha);
+                        tmParcela.setValueAt(parcelas.get(i).getId(), i, 0);
+                        tmParcela.setValueAt(parcelas.get(i).getParcela(), i, 1);
+                        tmParcela.setValueAt(format(parcelas.get(i).getValor()), i, 2);
+                        tmParcela.setValueAt(formatData(parcelas.get(i).getDataCompra()), i, 3);
+                        tmParcela.setValueAt(formatData(parcelas.get(i).getDataPagamento()), i, 4);
+                        tmParcela.setValueAt(parcelas.get(i).getStatus(), i, 5);
+                        tmParcela.setValueAt(parcelas.get(i).getDesc(), i, 6);
+                        tmParcela.setValueAt(parcelas.get(i).getObs(), i, 7);
+                        tmParcela.setValueAt(parcelas.get(i).getTipo(), i, 8);
+                    }
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
+                }
+            }
+        }
+    }//GEN-LAST:event_jRBDesejadoActionPerformed
+
+    private void jRBTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBTotalActionPerformed
+        if (jRBTotal.isSelected()) {
+            jRBAtual.setSelected(false);
+            jRBDesejado.setSelected(false);
             try {
                 ParcelaDAO pdao = new ParcelaDAO();
-                parcelas = pdao.ListarDataDesejada(jDCInicio.getDate());
+                parcelas = pdao.ListarParcela();
 
 
                 while (tmParcela.getRowCount() > 0) {
@@ -178,61 +208,50 @@ public class Listagem_Cartao extends javax.swing.JInternalFrame {
                     tmParcela.setValueAt(parcelas.get(i).getDesc(), i, 6);
                     tmParcela.setValueAt(parcelas.get(i).getObs(), i, 7);
                     tmParcela.setValueAt(parcelas.get(i).getTipo(), i, 8);
-
-
-
                 }
-
-
-
-
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
             }
-
         }
-    }//GEN-LAST:event_jRBDesejadoActionPerformed
-
-    private void jRBTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBTotalActionPerformed
-        if (jRBTotal.isSelected() == true) {
-            jRBAtual.setSelected(false);
-            jRBDesejado.setSelected(false);
-        }
-        try {
-            ParcelaDAO pdao = new ParcelaDAO();
-            parcelas = pdao.ListarParcela();
-
-
-            while (tmParcela.getRowCount() > 0) {
-                tmParcela.removeRow(0);
-            }
-
-            String[] linha = new String[]{null, null, null, null};
-            for (int i = 0; i < parcelas.size(); i++) {
-                tmParcela.addRow(linha);
-                tmParcela.setValueAt(parcelas.get(i).getId(), i, 0);
-                tmParcela.setValueAt(parcelas.get(i).getParcela(), i, 1);
-                tmParcela.setValueAt(format(parcelas.get(i).getValor()), i, 2);
-                tmParcela.setValueAt(formatData(parcelas.get(i).getDataCompra()), i, 3);
-                tmParcela.setValueAt(formatData(parcelas.get(i).getDataPagamento()), i, 4);
-                tmParcela.setValueAt(parcelas.get(i).getStatus(), i, 5);
-                tmParcela.setValueAt(parcelas.get(i).getDesc(), i, 6);
-                tmParcela.setValueAt(parcelas.get(i).getObs(), i, 7);
-                tmParcela.setValueAt(parcelas.get(i).getTipo(), i, 8);
-
-
-
-            }
-
-
-
-
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
-        }
-
-
     }//GEN-LAST:event_jRBTotalActionPerformed
+
+    private void jDCInicioPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDCInicioPropertyChange
+        if (jRBDesejado.isSelected()) {
+            jRBAtual.setSelected(false);
+            jRBTotal.setSelected(false);
+            if (jDCInicio.getDate() == null) {
+                jRBDesejado.setSelected(false);
+                JOptionPane.showMessageDialog(null, "Por favor, preencher a data desejada.");
+
+            } else {
+                try {
+                    ParcelaDAO pdao = new ParcelaDAO();
+                    parcelas = pdao.ListarDataDesejada(jDCInicio.getDate());
+
+
+                    while (tmParcela.getRowCount() > 0) {
+                        tmParcela.removeRow(0);
+                    }
+
+                    String[] linha = new String[]{null, null, null, null};
+                    for (int i = 0; i < parcelas.size(); i++) {
+                        tmParcela.addRow(linha);
+                        tmParcela.setValueAt(parcelas.get(i).getId(), i, 0);
+                        tmParcela.setValueAt(parcelas.get(i).getParcela(), i, 1);
+                        tmParcela.setValueAt(format(parcelas.get(i).getValor()), i, 2);
+                        tmParcela.setValueAt(formatData(parcelas.get(i).getDataCompra()), i, 3);
+                        tmParcela.setValueAt(formatData(parcelas.get(i).getDataPagamento()), i, 4);
+                        tmParcela.setValueAt(parcelas.get(i).getStatus(), i, 5);
+                        tmParcela.setValueAt(parcelas.get(i).getDesc(), i, 6);
+                        tmParcela.setValueAt(parcelas.get(i).getObs(), i, 7);
+                        tmParcela.setValueAt(parcelas.get(i).getTipo(), i, 8);
+                    }
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, "Erro:\n" + ex);
+                }
+            }
+        }
+    }//GEN-LAST:event_jDCInicioPropertyChange
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable Tabela;
     private com.toedter.calendar.JDateChooser jDCInicio;

@@ -4,24 +4,12 @@ import java.util.Date;
 
 public class Cliente {
 
-    private Integer id;
-    private String nome;
-    private Date nascimento;
-    private String telefone;
-    private String cpf;
-    private String rg;
-    private String email;
-    private String rua;
-    private String numero;
-    private String bairro;
-    private String cidade;
-
-    public Date getNascimento() {
-        return nascimento;
+    public Integer getId() {
+        return id;
     }
 
-    public void setNascimento(Date nascimento) {
-        this.nascimento = nascimento;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -32,12 +20,28 @@ public class Cliente {
         this.nome = nome;
     }
 
+    public Date getNascimento() {
+        return nascimento;
+    }
+
+    public void setNascimento(Date nascimento) {
+        this.nascimento = nascimento;
+    }
+
     public String getTelefone() {
         return telefone;
     }
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
 
     public String getCpf() {
@@ -95,12 +99,16 @@ public class Cliente {
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    private Integer id;
+    private String nome;
+    private Date nascimento;
+    private String telefone;
+    private String celular;
+    private String cpf;
+    private String rg;
+    private String email;
+    private String rua;
+    private String numero;
+    private String bairro;
+    private String cidade;
 }

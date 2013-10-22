@@ -80,14 +80,14 @@
                       <Component id="jTLogin" pref="240" max="32767" attributes="0"/>
                       <Component id="jTSenha" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="60" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="114" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="jButCon" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButCanc" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="68" pref="68" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -104,12 +104,12 @@
                       <Component id="jLSenha" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTSenha" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButCanc" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButCon" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace pref="12" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

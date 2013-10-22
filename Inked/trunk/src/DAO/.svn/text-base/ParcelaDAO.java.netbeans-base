@@ -53,7 +53,7 @@ public class ParcelaDAO {
     }
 
     public List<Parcela> ListarParcela() throws SQLException {
-        String sql = "select * from parcelas where par_datapgto >= current_date order by par_codigo,par_parcela";
+        String sql = "select * from parcelas where par_datapgto >= current_date order by par_codigo";
         List<Parcela> parcelas = new ArrayList<>();
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -81,7 +81,7 @@ public class ParcelaDAO {
     }
 
     public List<Parcela> ListarCurrent() throws SQLException {
-        String sql = "select * from parcelas where par_datapgto = current_date order by par_codigo,par_parcela";
+        String sql = "select * from parcelas where par_datapgto = current_date order by par_codigo";
         List<Parcela> parcelas = new ArrayList<>();
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -109,7 +109,7 @@ public class ParcelaDAO {
     }
 
     public List<Parcela> ListarDataDesejada(java.util.Date data) throws SQLException {
-        String sql = "select * from parcelas where par_datapgto = ? order by par_codigo,par_parcela";
+        String sql = "select * from parcelas where par_datapgto = ? order by par_codigo";
         List<Parcela> parcelas = new ArrayList<>();
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);

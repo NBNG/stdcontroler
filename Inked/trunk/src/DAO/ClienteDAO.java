@@ -19,20 +19,21 @@ public class ClienteDAO {
     }
 
     public void adicionar(Cliente cliente) throws SQLException {
-        String sql = "insert into cliente (cli_nome,cli_datanasc,cli_telefone,cli_cpf,cli_rg,"
-                + "cli_email,cli_rua,cli_numero,cli_bairro,cli_cidade) values (?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into cliente (cli_nome,cli_datanasc,cli_telefone,cli_celular,cli_cpf,cli_rg,"
+                + "cli_email,cli_rua,cli_numero,cli_bairro,cli_cidade) values (?,?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement stmt = this.conexao.prepareStatement(sql);
             stmt.setString(1, cliente.getNome());
             stmt.setDate(2, new java.sql.Date(cliente.getNascimento().getTime()));
             stmt.setString(3, cliente.getTelefone());
-            stmt.setString(4, cliente.getCpf());
-            stmt.setString(5, cliente.getRg());
-            stmt.setString(6, cliente.getEmail());
-            stmt.setString(7, cliente.getRua());
-            stmt.setString(8, cliente.getNumero());
-            stmt.setString(9, cliente.getBairro());
-            stmt.setString(10, cliente.getCidade());
+            stmt.setString(4, cliente.getCelular());
+            stmt.setString(5, cliente.getCpf());
+            stmt.setString(6, cliente.getRg());
+            stmt.setString(7, cliente.getEmail());
+            stmt.setString(8, cliente.getRua());
+            stmt.setString(9, cliente.getNumero());
+            stmt.setString(10, cliente.getBairro());
+            stmt.setString(11, cliente.getCidade());
 
             stmt.execute();
             stmt.close();
@@ -50,20 +51,20 @@ public class ClienteDAO {
         List<Cliente> clientes = new ArrayList<>();
 
         while (rs.next()) {
-
-            Cliente t = new Cliente();
-            t.setNome(rs.getString("cli_nome"));
-            t.setNascimento(rs.getDate("cli_datanasc"));
-            t.setTelefone(rs.getString("cli_telefone"));
-            t.setCpf(rs.getString("cli_cpf"));
-            t.setRg(rs.getString("cli_rg"));
-            t.setEmail(rs.getString("cli_email"));
-            t.setRua(rs.getString("cli_rua"));
-            t.setNumero(rs.getString("cli_numero"));
-            t.setBairro(rs.getString("cli_bairro"));
-            t.setCidade(rs.getString("cli_cidade"));
-            t.setId(rs.getInt("cli_codigo"));
-            clientes.add(t);
+            Cliente cliente = new Cliente();
+            cliente.setNome(rs.getString("cli_nome"));
+            cliente.setNascimento(rs.getDate("cli_datanasc"));
+            cliente.setTelefone(rs.getString("cli_telefone"));
+            cliente.setCelular(rs.getString("cli_celular"));
+            cliente.setCpf(rs.getString("cli_cpf"));
+            cliente.setRg(rs.getString("cli_rg"));
+            cliente.setEmail(rs.getString("cli_email"));
+            cliente.setRua(rs.getString("cli_rua"));
+            cliente.setNumero(rs.getString("cli_numero"));
+            cliente.setBairro(rs.getString("cli_bairro"));
+            cliente.setCidade(rs.getString("cli_cidade"));
+            cliente.setId(rs.getInt("cli_codigo"));
+            clientes.add(cliente);
         }
         rs.close();
         pstmt.close();
@@ -79,21 +80,22 @@ public class ClienteDAO {
     }
 
     public void alterar(Cliente cliente) throws SQLException {
-        String sql = "update cliente set cli_nome = ?,cli_datanasc = ?, cli_telefone = ?, cli_cpf = ?,"
+        String sql = "update cliente set cli_nome = ?,cli_datanasc = ?, cli_telefone = ?,cli_celular = ?, cli_cpf = ?,"
                 + "cli_rg = ?,cli_email = ?,cli_rua = ?, cli_numero = ?, cli_bairro = ?,cli_cidade = ?"
                 + " where cli_codigo = ?";
         PreparedStatement stmt = this.conexao.prepareStatement(sql);
         stmt.setString(1, cliente.getNome());
         stmt.setDate(2, new java.sql.Date(cliente.getNascimento().getTime()));
         stmt.setString(3, cliente.getTelefone());
-        stmt.setString(4, cliente.getCpf());
-        stmt.setString(5, cliente.getRg());
-        stmt.setString(6, cliente.getEmail());
-        stmt.setString(7, cliente.getRua());
-        stmt.setString(8, cliente.getNumero());
-        stmt.setString(9, cliente.getBairro());
-        stmt.setString(10, cliente.getCidade());
-        stmt.setInt(11, cliente.getId());
+        stmt.setString(4, cliente.getCelular());
+        stmt.setString(5, cliente.getCpf());
+        stmt.setString(6, cliente.getRg());
+        stmt.setString(7, cliente.getEmail());
+        stmt.setString(8, cliente.getRua());
+        stmt.setString(9, cliente.getNumero());
+        stmt.setString(10, cliente.getBairro());
+        stmt.setString(11, cliente.getCidade());
+        stmt.setInt(12, cliente.getId());
         stmt.execute();
         stmt.close();
     }
@@ -133,6 +135,8 @@ public class ClienteDAO {
             cliente.setNome(rs.getString("cli_nome"));
             cliente.setCpf(rs.getString("cli_cpf"));
             cliente.setRua(rs.getString("cli_rua"));
+            cliente.setCelular(rs.getString("cli_celular"));
+            cliente.setTelefone(rs.getString("cli_telefone"));
             cliente.setNumero(rs.getString("cli_numero"));
             cliente.setBairro(rs.getString("cli_bairro"));
             cliente.setCidade(rs.getString("cli_cidade"));
@@ -159,6 +163,8 @@ public class ClienteDAO {
         while (rs.next()) {
             Cliente cliente = new Cliente();
             cliente.setNome(rs.getString("cli_nome"));
+            cliente.setCelular(rs.getString("cli_celular"));
+            cliente.setTelefone(rs.getString("cli_telefone"));
             cliente.setCpf(rs.getString("cli_cpf"));
             cliente.setRua(rs.getString("cli_rua"));
             cliente.setNumero(rs.getString("cli_numero"));

@@ -88,7 +88,7 @@ public class Altera_Funcionario extends javax.swing.JInternalFrame {
         jPanelLayout.setVerticalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLayout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
+                .addContainerGap(39, Short.MAX_VALUE)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLUsu))

@@ -3,13 +3,10 @@ package Interfaces;
 import DAO.FuncionarioDAO;
 import java.awt.Color;
 import java.awt.Toolkit;
-import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
-
-    private Connection conexao;
 
     public Login() {
         super("St. Controller");
@@ -18,6 +15,8 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         getContentPane().setBackground(Color.white);
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagens/icone.png")));
+        jTLogin.setText("ADMIN");
+        jTSenha.setText("ADMIN");
     }
 
     @SuppressWarnings("unchecked")
@@ -85,13 +84,13 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
                     .addComponent(jTSenha))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
-                .addContainerGap(114, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButCon)
                 .addGap(18, 18, 18)
                 .addComponent(jButCanc)
-                .addGap(68, 68, 68))
+                .addGap(90, 90, 90))
         );
         jPanelLayout.setVerticalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,11 +103,11 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLSenha)
                     .addComponent(jTSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButCanc)
                     .addComponent(jButCon))
-                .addContainerGap())
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         jLImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/login.jpg"))); // NOI18N

@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class Lista_Aniversario extends javax.swing.JInternalFrame {
 
-    DefaultTableModel tmCliente = new DefaultTableModel(null, new String[]{"Nome", "CPF", "Endereço", "email", "Nascimento"});
+    DefaultTableModel tmCliente = new DefaultTableModel(null, new String[]{"Nome", "Telefone", "Celular", "email", "Nascimento"});
     List<Cliente> clientes;
     ListSelectionModel lsmCliente;
 
@@ -91,7 +91,7 @@ public class Lista_Aniversario extends javax.swing.JInternalFrame {
                         .addComponent(jRBHoje)
                         .addGap(18, 18, 18)
                         .addComponent(jRBMes)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         pack();
@@ -113,11 +113,10 @@ public class Lista_Aniversario extends javax.swing.JInternalFrame {
             }
             String[] linha = new String[]{null, null, null, null};
             for (int i = 0; i < clientes.size(); i++) {
-                endereco = clientes.get(i).getRua() + " " + clientes.get(i).getNumero() + ", " + clientes.get(i).getBairro() + " - " + clientes.get(i).getCidade();
                 tmCliente.addRow(linha);
                 tmCliente.setValueAt(clientes.get(i).getNome(), i, 0);
-                tmCliente.setValueAt(clientes.get(i).getCpf(), i, 1);
-                tmCliente.setValueAt(endereco, i, 2);
+                tmCliente.setValueAt(clientes.get(i).getTelefone(), i, 1);
+                tmCliente.setValueAt(clientes.get(i).getCelular(), i, 2);
                 tmCliente.setValueAt(clientes.get(i).getEmail(), i, 3);
                 tmCliente.setValueAt(formatData(clientes.get(i).getNascimento()), i, 4);
             }
@@ -142,11 +141,10 @@ public class Lista_Aniversario extends javax.swing.JInternalFrame {
             }
             String[] linha = new String[]{null, null, null, null};
             for (int i = 0; i < clientes.size(); i++) {
-                endereco = clientes.get(i).getRua() + " " + clientes.get(i).getNumero() + ", " + clientes.get(i).getBairro() + " - " + clientes.get(i).getCidade();
                 tmCliente.addRow(linha);
                 tmCliente.setValueAt(clientes.get(i).getNome(), i, 0);
-                tmCliente.setValueAt(clientes.get(i).getCpf(), i, 1);
-                tmCliente.setValueAt(endereco, i, 2);
+                tmCliente.setValueAt(clientes.get(i).getTelefone(), i, 1);
+                tmCliente.setValueAt(clientes.get(i).getCelular(), i, 2);
                 tmCliente.setValueAt(clientes.get(i).getEmail(), i, 3);
                 tmCliente.setValueAt(formatData(clientes.get(i).getNascimento()), i, 4);
             }

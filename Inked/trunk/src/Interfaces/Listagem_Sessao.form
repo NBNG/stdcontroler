@@ -22,52 +22,48 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="1253" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jBVer" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jBFinalizar" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jRBAtual" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jRBDesejado" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jDCDesejada" min="-2" pref="124" max="-2" attributes="0"/>
+                              <Component id="jDCDesejada" linkSize="3" min="-2" pref="124" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRBAtual" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="jRBTatuador" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jCBTatuador" min="-2" pref="239" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jDCDesejadaTat" linkSize="3" min="-2" pref="173" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="jRBCliente" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jTCPF" min="-2" pref="163" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jBExcluir" linkSize="2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <Component id="jBImprimir" linkSize="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jDCDesejadaTat" min="-2" pref="173" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jBVer" linkSize="1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="jBFinalizar" linkSize="1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Component id="jBExcluir" linkSize="2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              <Component id="jBImprimir" linkSize="2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="1290" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="56" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -77,32 +73,39 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jRBAtual" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTCPF" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRBCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jDCDesejada" max="32767" attributes="0"/>
-                      <Component id="jRBDesejado" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jRBAtual" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jDCDesejada" max="32767" attributes="0"/>
+                          <Component id="jRBDesejado" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Component id="jDCDesejadaTat" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="jRBTatuador" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCBTatuador" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTCPF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRBCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jDCDesejadaTat" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="jRBTatuador" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCBTatuador" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jBFinalizar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jBVer" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jBImprimir" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jBExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" pref="332" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="384" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -185,6 +188,9 @@
           <Font name="Tahoma" size="18" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="jDCDesejadaPropertyChange"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBFinalizar">
       <Properties>

@@ -64,7 +64,7 @@ public class Pesquisa_Total_Entrada extends javax.swing.JInternalFrame {
         Tabela.setModel(tmEntrada);
         jScrollPane1.setViewportView(Tabela);
 
-        jLTotal.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLTotal.setText("Total:");
 
         jTFTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -120,7 +120,7 @@ public class Pesquisa_Total_Entrada extends javax.swing.JInternalFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jCBTipoEntrada, 0, 239, Short.MAX_VALUE)
                                     .addComponent(jCBTatuador, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
                                 .addComponent(jBPesquisar)
                                 .addGap(45, 45, 45)))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 688, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -142,7 +142,7 @@ public class Pesquisa_Total_Entrada extends javax.swing.JInternalFrame {
                     .addComponent(jCBTatuador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
+                .addContainerGap(52, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

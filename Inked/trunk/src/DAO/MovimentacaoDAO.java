@@ -294,7 +294,11 @@ public class MovimentacaoDAO {
         String sql = "select case when sum(mov_valor) is null then 0.0 else sum(mov_valor) end - "
                 + "(select case when sum(mov_valor) is null then 0.0 else sum(mov_valor) end "
                 + "from movimentacao where mov_tipo = 'S') as total from movimentacao where mov_tipo='E'";
-
+        /*String sql = "select case when SUM(mov_valor) is null then 0.0 else sum(mov_valor) end - "
+         + "(select case when sum(mov_valor) is null then 0.0 else sum(mov_valor) end "
+         + "from movimentacao where mov_tipo = 'S' and mov_data = current_date) "
+         + "as total from movimentacao where mov_tipo='E' and mov_data = current_date";
+         */
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery();
