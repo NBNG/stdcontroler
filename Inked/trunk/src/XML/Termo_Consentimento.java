@@ -5,8 +5,6 @@
 package XML;
 
 import Connection.ConnectionFactory;
-import java.io.File;
-import java.io.InputStream;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -38,7 +36,6 @@ public class Termo_Consentimento {
     public void gerar(int id) throws JRException, SQLException {
         URL arquivo = getClass().getResource("/Termo/inked.jrxml");
         JasperDesign desenho = JRXmlLoader.load(arquivo.getPath());
-
         JasperReport relatorio = JasperCompileManager.compileReport(desenho);
         String query = "select cli_nome, cli_cpf,cli_rg,to_char(cli_datanasc,"
                 + "'dd/mm/yyyy'),cli_rua || ' ' || cli_numero || ', ' || cli_bairro || ' - ' || cli_cidade as ENDERECO"

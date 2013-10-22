@@ -192,7 +192,7 @@
                   <Component id="jTCidade" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jSeparator1" pref="4" max="32767" attributes="0"/>
+              <Component id="jSeparator1" pref="1" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jBPesquisar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -203,8 +203,8 @@
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="jSeparator2" min="-2" pref="11" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="244" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="210" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
