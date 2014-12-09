@@ -6,137 +6,112 @@ package Modelo;
 
 import java.sql.Time;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
  * @author Administrador
  */
 public class Sessao {
-
-    private Integer codigo;
-    private String tipo;
-    private String descricao;
-    private Date data;
-    private Double valor;
-    private Double sinal;
-    private Integer sessao;
-    private Funcionario funcionario;
-    private Cliente cliente;
-    private String hora;
-    private String retoque;
-    private Double restante;
-
-    public Double getRestante() {
-        return restante;
+    
+    private Long          ses_codigo;
+    private Cliente       ses_cliente;
+    private Funcionario   ses_funcionario;
+    private Date          ses_data;
+    private String        ses_tipo;
+    private String        ses_sinal;
+    private String        ses_retoque;
+    private String        ses_hora;
+    private List<Parcela> ses_parcela;
+    
+    public Sessao(){
+        
     }
 
-    public void setRestante(Double restante) {
-        this.restante = restante;
+    public Sessao(Long ses_codigo, Cliente ses_cliente,
+            Funcionario ses_funcionario, Date ses_data, String ses_tipo, String ses_sinal, String ses_retoque, String ses_hora, List<Parcela> ses_parcela) {
+        this.ses_codigo = ses_codigo;
+        this.ses_cliente = ses_cliente;
+        this.ses_funcionario = ses_funcionario;
+        this.ses_data = ses_data;
+        this.ses_tipo = ses_tipo;
+        this.ses_sinal = ses_sinal;
+        this.ses_retoque = ses_retoque;
+        this.ses_hora = ses_hora;
+        this.ses_parcela = ses_parcela;
     }
 
-    public String getRetoque() {
-        return retoque;
+    public Long getSes_codigo() {
+        return ses_codigo;
     }
 
-    public void setRetoque(String retoque) {
-        this.retoque = retoque;
+    public void setSes_codigo(Long ses_codigo) {
+        this.ses_codigo = ses_codigo;
     }
 
-    public Integer getCodigo() {
-        return codigo;
+    public Cliente getSes_cliente() {
+        return ses_cliente;
     }
 
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
+    public void setSes_cliente(Cliente ses_cliente) {
+        this.ses_cliente = ses_cliente;
     }
 
-    public String getTipo() {
-        return tipo;
+    public Funcionario getSes_funcionario() {
+        return ses_funcionario;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setSes_funcionario(Funcionario ses_funcionario) {
+        this.ses_funcionario = ses_funcionario;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public Date getSes_data() {
+        return ses_data;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setSes_data(Date ses_data) {
+        this.ses_data = ses_data;
     }
 
-    public Date getData() {
-        return data;
+    public String getSes_tipo() {
+        return ses_tipo;
     }
 
-    public void setData(Date data) {
-        this.data = data;
+    public void setSes_tipo(String ses_tipo) {
+        this.ses_tipo = ses_tipo;
     }
 
-    public Double getValor() {
-        return valor;
+    public String getSes_sinal() {
+        return ses_sinal;
     }
 
-    public void setValor(Double valor) {
-        this.valor = valor;
+    public void setSes_sinal(String ses_sinal) {
+        this.ses_sinal = ses_sinal;
     }
 
-    public Integer getSessao() {
-        return sessao;
+    public String getSes_retoque() {
+        return ses_retoque;
     }
 
-    public void setSessao(Integer sessao) {
-        this.sessao = sessao;
+    public void setSes_retoque(String ses_retoque) {
+        this.ses_retoque = ses_retoque;
     }
 
-    /**
-     * @return the tatuador
-     */
-    public Funcionario getFuncionario() {
-        return funcionario;
+    public String getSes_hora() {
+        return ses_hora;
     }
 
-    /**
-     * @param tatuador the tatuador to set
-     */
-    public void setFuncionario(Funcionario funcionario) {
-        this.funcionario = funcionario;
+    public void setSes_hora(String ses_hora) {
+        this.ses_hora = ses_hora;
     }
 
-    /**
-     * @return the cliente
-     */
-    public Cliente getCliente() {
-        return cliente;
+    public List<Parcela> getSes_parcela() {
+        return ses_parcela;
     }
 
-    /**
-     * @param cliente the cliente to set
-     */
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setSes_parcela(List<Parcela> ses_parcela) {
+        this.ses_parcela = ses_parcela;
     }
 
-    /**
-     * @return the sinal
-     */
-    public Double getSinal() {
-        return sinal;
-    }
-
-    /**
-     * @param sinal the sinal to set
-     */
-    public void setSinal(Double sinal) {
-        this.sinal = sinal;
-    }
-
-    public String getHora() {
-        return hora;
-    }
-
-    public void setHora(String hora) {
-        this.hora = hora;
-    }
+    
 }

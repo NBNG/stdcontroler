@@ -4,85 +4,104 @@ import java.util.Date;
 
 public class Parcela {
 
-    private int parcela;
-    private double valor;
-    private Date dataPagamento;
-    private Date dataCompra;
-    private String status;
-    private String desc;
-    private String obs;
-    private String tipo;
-    private Integer id;
+   private Long   par_codigo;
+   private Date   par_datapgto;
+   private int    par_parcela;
+   private String par_tipo;
+   private float  par_desc;
+   private float  par_valor;
+   private String par_status;
+   private Date   par_datacompra;
+   private String par_obs;
+   
+   public Parcela(){
+       
+   }
 
-    public String getTipo() {
-        return tipo;
+    public Parcela(Long par_codigo, Date par_datapgto, int par_parcela,
+            String par_tipo, float par_desc, float par_valor, String par_status, Date par_datacompra, String par_obs) {
+        this.par_codigo = par_codigo;
+        this.par_datapgto = par_datapgto;
+        this.par_parcela = par_parcela;
+        this.par_tipo = par_tipo;
+        this.par_desc = par_desc;
+        this.par_valor = par_valor;
+        this.par_status = par_status;
+        this.par_datacompra = par_datacompra;
+        this.par_obs = par_obs;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public Long getPar_codigo() {
+        return par_codigo;
     }
 
-    public Integer getId() {
-        return id;
+    public void setPar_codigo(Long par_codigo) {
+        this.par_codigo = par_codigo;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public Date getPar_datapgto() {
+        return par_datapgto;
     }
 
-    public String getStatus() {
-        return status;
+    public void setPar_datapgto(Date par_datapgto) {
+        this.par_datapgto = par_datapgto;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public int getPar_parcela() {
+        return par_parcela;
     }
 
-    public int getParcela() {
-        return parcela;
+    public void setPar_parcela(int par_parcela) {
+        this.par_parcela = par_parcela;
     }
 
-    public void setParcela(int parcela) {
-        this.parcela = parcela;
+    public String getPar_tipo() {
+        return par_tipo;
     }
 
-    public double getValor() {
-        return valor;
+    public void setPar_tipo(String par_tipo) {
+        this.par_tipo = par_tipo;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public float getPar_desc() {
+        return par_desc;
     }
 
-    public Date getDataPagamento() {
-        return dataPagamento;
+    public void setPar_desc(float par_desc) {
+        this.par_desc = par_desc;
     }
 
-    public void setDataPagamento(Date dataPagamento) {
-        this.dataPagamento = dataPagamento;
+    public float getPar_valor() {
+        return par_valor;
     }
 
-    public Date getDataCompra() {
-        return dataCompra;
+    public void setPar_valor(float par_valor) {
+        this.par_valor = par_valor;
     }
 
-    public void setDataCompra(Date dataCompra) {
-        this.dataCompra = dataCompra;
+    public String getPar_status() {
+        return par_status;
     }
 
-    public String getDesc() {
-        return desc;
+    public void setPar_status(String par_status) {
+        this.par_status = par_status;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public Date getPar_datacompra() {
+        return par_datacompra;
     }
 
-    public String getObs() {
-        return obs;
+    public void setPar_datacompra(Date par_datacompra) {
+        this.par_datacompra = par_datacompra;
     }
 
-    public void setObs(String obs) {
-        this.obs = obs;
+    public String getPar_obs() {
+        return par_obs;
     }
+
+    public void setPar_obs(String par_obs) {
+        this.par_obs = par_obs;
+    }
+   
+   
 }
